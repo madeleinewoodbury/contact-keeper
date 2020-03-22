@@ -22,6 +22,7 @@ const Navbar = ({ title, icon }) => {
 
   const authLinks = (
     <Fragment>
+      <li style={{ marginRight: '10px' }}>Hello {user && user.name}</li>
       <li>
         <a onClick={onLogout} href="#!">
           <i className="fas fa-sign-out-alt" />{' '}
@@ -47,12 +48,8 @@ const Navbar = ({ title, icon }) => {
       <Link to="/">
         <i className={icon} /> {title}
       </Link>
-      <ul>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
-      </ul>
+
+      <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
     </nav>
   );
 };
