@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Navbar = ({ title, icon }) => {
+  const guestLinks = (
+    <Fragment>
+      <li>
+        <Link to="/register">Register</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
+    </Fragment>
+  );
+
   return (
     <nav className="navbar bg-primary">
-      <h1>
+      <Link to="/">
         <i className={icon} /> {title}
-      </h1>
+      </Link>
       <ul>
         <li>
-          <Link to="/">Home</Link>
           <Link to="/about">About</Link>
         </li>
+        {guestLinks}
       </ul>
     </nav>
   );
