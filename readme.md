@@ -1,6 +1,6 @@
 # Contact Keeper
 
-> MERN application built as part of Brad Traversy's "React Front to Back" course on Udemy. A simple app where useres can store contacts. Full CRUD functionality.
+> MERN application built as part of Brad Traversy's "React Front to Back" course on Udemy. A simple app where users can store contacts. Full CRUD functionality.
 
 #### [View app](https://fathomless-mesa-77741.herokuapp.com/login)
 
